@@ -1,0 +1,84 @@
+// @use './sass/layout/global-rules';
+// @use './sass/pages/contact-us';
+// @use './sass/variables/colors';
+
+// $red :red;
+
+// .header {
+//     background-color: $red;
+// }
+
+// .body {
+//     $red: green !global;
+//     background-color: $red;
+// }
+
+// .footer {
+//     background-color: $red;
+// }
+
+// .sidebar {
+//     background-color: colors.$main-cl;
+//     color: colors.$alt-cl;
+// }
+
+// @media (colors.$max-mobile) {
+//     .sidebar {
+//         padding: 20px;
+//     }
+// }
+
+// .parent {
+//     font-weight: bold;
+
+//     .child {
+//         font-size: 20px;
+
+//         .grand-child {
+//             font-size: 15px;
+//         }
+//     }
+// }
+
+// .parent {
+//     > {
+//         .child-1 {
+//             font-size: 10px;
+//         }
+
+//         .child-2 {
+//             font-size: 20px;
+//         }
+//     }
+
+//     .child-3 {
+//         font-size: 30px;
+//     }
+// }
+
+
+.content {
+    >.box {
+        padding: 15px;
+
+        > {
+            .title {
+                font-size: 18px;
+            }
+        }
+    }
+
+    .cat {
+        padding: 15px;
+    }
+
+    &.premium {
+        &:before {
+            content: "Premium Box";
+        }
+
+        &:hover {
+            background-color: #eee;
+        }
+    }
+}
