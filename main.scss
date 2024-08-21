@@ -57,28 +57,25 @@
 // }
 
 
-.content {
-    >.box {
-        padding: 15px;
 
-        > {
-            .title {
-                font-size: 18px;
-            }
-        }
+@function get-total($nums...) {
+    $total: 0;
+
+    @each $num in $nums {
+        $total: $total + $num
     }
 
-    .cat {
-        padding: 15px;
-    }
+    @return $total
+}
 
-    &.premium {
-        &:before {
-            content: "Premium Box";
-        }
+// SASS Code
+.box {
+    top: get-total(100, 50, 20);
+    right: get-total(100, 50);
+}
 
-        &:hover {
-            background-color: #eee;
-        }
-    }
+// Output
+.box {
+    top: 170;
+    right: 150;
 }
